@@ -36,12 +36,12 @@ void main() {
   int x = 0;
   int y = 1;
   int temp;
-  print("x = ${x}, y = ${y}");
+  print("INITIAL VALUES: x = ${x}, y = ${y}");
 
   temp = x;
   x = y;
   y = temp;
-  print("x = ${x}, y = ${y}");
+  print("SWAPPED VALUES: x = ${x}, y = ${y}");
 
   ///Write a program in Dart to remove all whitespaces from String.
   String textToTrim = "Hello I am Nathan";
