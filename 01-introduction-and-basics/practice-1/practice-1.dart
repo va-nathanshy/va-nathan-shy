@@ -28,13 +28,9 @@ void main() {
 
   ///Write a program to find quotient and remainder of two integers.
   int divisor = 5;
-  int dividend = 18;
-  //Convert double to string, then split string from "." to get quotient and remainder
-  double divide = dividend/divisor;
-  String dividedString = divide.toString();
-  List<String> quotientRemainder = dividedString.split(".");
-  print("Quotient: ${quotientRemainder[0]}");
-  print("Remainder: ${quotientRemainder[1]}");
+  int dividend = 21;
+  print("Quotient: ${dividend~/divisor}");
+  print("Remainder: ${dividend%divisor}");
 
   ///Write a program to swap two numbers.
   int x = 0;
