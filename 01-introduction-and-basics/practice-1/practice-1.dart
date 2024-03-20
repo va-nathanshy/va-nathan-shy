@@ -1,3 +1,5 @@
+import 'dart:io'; //for user input
+
 void main() {
   /// Write a program to print your name in Dart.
   print("Nathan Shy");
@@ -18,13 +20,25 @@ void main() {
   print("Simple interest is: $simpleInterest");
 
   ///Write a program to print full name of a from first name and last name using user input.
-
+  print("Enter First Name: ");
+  String? firstName = stdin.readLineSync();
+  print ("Enter Last Name: ");
+  String? lastName = stdin.readLineSync();
+  print("Full Name: ${firstName} ${lastName}");
 
   ///Write a program to find quotient and remainder of two integers.
-
+  
 
   ///Write a program to swap two numbers.
-  
+  int x = 0;
+  int y = 1;
+  int temp;
+  print("x = ${x}, y = ${y}");
+
+  temp = x;
+  x = y;
+  y = temp;
+  print("x = ${x}, y = ${y}");
 
   ///Write a program in Dart to remove all whitespaces from String.
   
