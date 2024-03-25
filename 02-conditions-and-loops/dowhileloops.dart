@@ -1,5 +1,3 @@
-import "dart:io";
-
 void main() {
   int i = 0;
   bool cont = true;
