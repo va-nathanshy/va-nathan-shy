@@ -7,5 +7,5 @@ void main() {
     }
     stars += "\n";
   }
-  print(stars);
+  print(stars); // print() has built in \n at the end
 }
