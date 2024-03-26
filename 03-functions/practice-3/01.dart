@@ -2,14 +2,12 @@
 
 import "dart:io";
 
-void printName() {
-  String? name = stdin.readLineSync();
+void printName(String name) {
   print("Hello, $name\n");
 }
 
 void main() {
-  while(true){
-    stdout.write("Please Enter name: ");
-    printName();
-  }
+  String myName = "Nathan Shy";
+  printName(myName);
+
 }
