@@ -26,8 +26,9 @@ num addUserInput(List userInputList) {
 
 // pause
 void pressAnyKeytoContinue() {
+  // ignore user input
   stdin.echoMode = false;
-  stdin.lineMode = false;
+  stdin.lineMode = false; // disabled for echoMode to work on Windows
 
   print("\nPress any key to continue...");
 
@@ -37,11 +38,11 @@ void pressAnyKeytoContinue() {
 /// main function
 void main() {
   try{
-  List userInputList = getUserInput();
-  num total = addUserInput(userInputList);
+    List userInputList = getUserInput();
+    num total = addUserInput(userInputList);
 
-  print("\nTOTAL IS: ${total}");
-  pressAnyKeytoContinue();
+    print("\nTOTAL IS: ${total}");
+    pressAnyKeytoContinue();
   } catch(e){
     print("Please enter a valid positive whole number");
     main();
