@@ -56,11 +56,11 @@ String lineBreak() {
 }
 
 void main() {
-  List<dynamic> taskList= [];
+  List<dynamic> taskList = [];
 
   while(true){
-    int userSelection = mainMenu();
-    switch(userSelection) {
+    //int userSelection = mainMenu();
+    switch(mainMenu()) {
       case 1:
       viewTasks(taskList);
       break;
