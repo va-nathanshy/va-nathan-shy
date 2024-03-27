@@ -1,11 +1,11 @@
 /// Create a simple to-do application that allows user to add, remove, and view their task.
 import "dart:io";
 // Main menu
-int mainMenu () {
+String mainMenu () {
   // menu to ask what user wants to do
   print("Please select an option (select number):\n1. View Tasks \n2. Add Task \n3. Remove Task \n");
   stdout.write("SELECTION: ");
-  int? userResponse = int.parse(stdin.readLineSync()!);
+  String? userResponse = stdin.readLineSync()!;
   print(lineBreak());
   return userResponse;
 }
@@ -19,7 +19,7 @@ void viewTasks(List taskList) {
     print("Here are the tasks: ");
     taskList.asMap().forEach((index, value) => print("${index+1}.) ${value}"));
   }
-
+  pressAnyKeytoContinue();
 
   print(lineBreak());
 }
@@ -33,6 +33,8 @@ List addTask(List taskList) {
   taskList.add(newTaskInput);
   print("Task succesfully added");
   print(lineBreak());
+
+  pressAnyKeytoContinue();
   return taskList;
 }
 
@@ -46,7 +48,10 @@ String removeTask(List taskList) {
   taskList.removeAt(taskRemoveInput - 1); 
 
   print("Task succesfully removed");
+  
   print(lineBreak());
+
+  pressAnyKeytoContinue();
   return "Remove";
 }
 
@@ -55,21 +60,33 @@ String lineBreak() {
   return"-----------------------------------\n";
 }
 
+// pause
+void pressAnyKeytoContinue() {
+  stdin.echoMode = false;
+  stdin.lineMode = false;
+
+  print("\nPress any key to continue...");
+
+  stdin.readByteSync();
+  stdin.echoMode = true;
+  stdin.lineMode = true;
+}
+
 void main() {
   List<dynamic> taskList = [];
 
   while(true){
     //int userSelection = mainMenu();
     switch(mainMenu()) {
-      case 1:
+      case "1":
       viewTasks(taskList);
       break;
 
-      case 2:
+      case "2":
       addTask(taskList);
       break;
 
-      case 3:
+      case "3":
       removeTask(taskList);
       break;
 
