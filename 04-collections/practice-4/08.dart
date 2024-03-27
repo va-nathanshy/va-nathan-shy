@@ -12,7 +12,6 @@ int mainMenu () {
 
 // view tasks
 void viewTasks(List taskList) {
-  // 1. View Tasks
   //if empty "Task list is empty..."
   if(taskList.isEmpty){
     print("Task List is empty... ;\(");
@@ -27,7 +26,6 @@ void viewTasks(List taskList) {
 
 // add tasks
 List addTask(List taskList) {
-  // 2. Add Task
   //option to exit adding task
   print("Please input your task: ");
   stdout.write("INPUT: ");
@@ -39,9 +37,7 @@ List addTask(List taskList) {
 }
 
 // remove tasks
-//List
 String removeTask(List taskList) {
-  //3. Remove Task option to remove task
   print("Which task to remove (Please enter number): ");
   taskList.asMap().forEach((index, value) => print("${index+1}.) ${value}"));
   stdout.write("INPUT: ");
@@ -49,12 +45,10 @@ String removeTask(List taskList) {
 
   taskList.removeAt(taskRemoveInput - 1); 
 
-
   print("Task succesfully removed");
   print(lineBreak());
   return "Remove";
 }
-
 
 // organize stuff
 String lineBreak() {
@@ -62,7 +56,7 @@ String lineBreak() {
 }
 
 void main() {
-List<dynamic> taskList= [];
+  List<dynamic> taskList= [];
 
   while(true){
     int userSelection = mainMenu();
