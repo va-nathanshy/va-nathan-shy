@@ -32,8 +32,6 @@ void pressAnyKeytoContinue() {
   print("\nPress any key to continue...");
 
   stdin.readByteSync();
-  stdin.echoMode = true;
-  stdin.lineMode = true;
 }
 
 /// main function
