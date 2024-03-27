@@ -8,20 +8,21 @@ int mainMenu () {
   int? userResponse = int.parse(stdin.readLineSync()!);
   print(lineBreak());
   return userResponse;
-
 }
 
 // view tasks
-
-String viewTasks(List taskList) {
+void viewTasks(List taskList) {
   // 1. View Tasks
   //if empty "Task list is empty..."
+  if(taskList.isEmpty){
+    print("Task List is empty... ;\(");
+  } else {
+    print("Here are the tasks: ");
+    taskList.asMap().forEach((index, value) => print("${index+1}.) ${value}"));
+  }
 
-  print("Here are the tasks: ");
-  taskList.asMap().forEach((index, value) => print("${index+1}.) ${value}"));
 
   print(lineBreak());
-  return "Here are the tasks";
 }
 
 // add tasks
@@ -61,7 +62,7 @@ String lineBreak() {
 }
 
 void main() {
-List<dynamic> taskList= ["dummy1", "dummy2", "dummy3"];
+List<dynamic> taskList= [];
 
   while(true){
     int userSelection = mainMenu();
@@ -71,7 +72,7 @@ List<dynamic> taskList= ["dummy1", "dummy2", "dummy3"];
       break;
 
       case 2:
-      taskList = addTask(taskList);
+      addTask(taskList);
       break;
 
       case 3:
