@@ -128,7 +128,6 @@ abstract class Bottle {
     return CokeBottle();
   }
 
-
   void open();
 }
 
