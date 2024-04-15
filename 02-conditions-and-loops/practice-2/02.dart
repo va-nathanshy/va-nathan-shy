@@ -5,11 +5,17 @@ void main() {
   
   while(true) {
     stdout.write("Please type a letter: ");
-    String? letter = stdin.readLineSync();
+    String letter = stdin.readLineSync()!;
+    
+    if(RegExp(r'^[A-Za-z]').hasMatch(letter) == false) {
+      print("Please enter a VALID LETTER\n");
+      continue;
+    }
+
     List<String> vowels = ["a", "e", "i", "o", 'u'];
 
     for(int i = 0; i < vowels.length; i++) {
-      if(vowels[i] == letter?.toLowerCase()) {
+      if(vowels[i] == letter.toLowerCase()) {
         print("Letter $letter is a VOWEL\n");
         break;
       }
