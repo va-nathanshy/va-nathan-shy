@@ -15,7 +15,6 @@ void getData(List userInputs) async {
 
 void main() {
   List userInputs = [];
-  bool continueInput = true;
 
   stdout.write("How many Strings to input?: ");
   int numberOfInputs = int.parse(stdin.readLineSync()!);

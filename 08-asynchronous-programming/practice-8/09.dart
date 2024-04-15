@@ -14,10 +14,12 @@ void getData(List<int> userInputs) async {
 
 void main() {
   List<int> userInputs = [];
-  bool continueInput = true;
-
+  
   stdout.write("How many Numbers to input?: ");
   int numberOfInputs = int.parse(stdin.readLineSync()!);
+  if(numberOfInputs <= 0) {
+    throw ("Please enter a positive number");
+  }
 
   for(int i = 1; i <= numberOfInputs; i++) {
     stdout.write("Enter number $i: ");
