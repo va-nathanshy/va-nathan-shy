@@ -12,7 +12,7 @@ Stream<String> inputStream() async*{
   List<String> lines = File('lib/files/04.csv').readAsStringSync().split("\n");
   print("--------------------");
   for(var line in lines){
-    await Future.delayed(Duration(seconds: 1));
+    //await Future.delayed(Duration(seconds: 1));
     print("Exercise 04: $line");
   }
 }
