@@ -13,7 +13,7 @@ Stream<String> inputStream() async*{
   print("--------------------");
   for(var line in lines){
     await Future.delayed(Duration(seconds: 1));
-    print(line);
+    print("Exercise 04: $line");
   }
 }
 
@@ -25,7 +25,7 @@ void awaitingFunction() async {
   toPrint.add(await futureFunction2());
   toPrint.add(await futureFunction3());
 
-  print(toPrint);
+  print("Exercise 05: $toPrint");
 }
 
 Future<int> futureFunction() async{
@@ -42,7 +42,7 @@ Future<int> futureFunction3() async{
 
 /// Exercise 06
 void asyncSum(int num1, int num2) async{
-  print(await calculate(num1, num2));
+  print("Exercise 06: ${await calculate(num1, num2)}");
 }
 
 Future<int> calculate(int num1, int num2) {
@@ -57,7 +57,7 @@ void asyncIntegerAdd() async{
   int inputB = main_utils.getIntUserInput();
   print("Processing...");
 
-  print(await calculateSum(inputA, inputB));
+  print("Exercise 07: ${await calculateSum(inputA, inputB)}");
 }
 
 Future<String> calculateSum(int inputA, int inputB) {
@@ -88,7 +88,7 @@ Future<List> asyncSortList(List userInputs) {
 
 
 void getDataAsyncSortedListPrint(List userInputs) async {
-  print(await asyncSortList(userInputs));
+  print("Exercise 08: ${await asyncSortList(userInputs)}");
 }
 
 /// Exercise 09
@@ -112,7 +112,7 @@ void asyncListMultiplication() {
 }
 
 void getDataAsyncListMultiplication(List<int> userInputs) async {
-  print(await multiplyIntegers(userInputs));
+  print("Exercise 09: ${await multiplyIntegers(userInputs)}");
 }
 
 Future<List> multiplyIntegers(List<int> userInputs) {
@@ -134,7 +134,7 @@ void asyncStringReverse() {
 }
 
 void getDataAsyncStringReverse(String userInput) async{
-  print("Reverse String: ${await reverseString(userInput)}");
+  print("Exercise 10: ${await reverseString(userInput)}");
 }
 
 Future<String> reverseString(String userInput) {

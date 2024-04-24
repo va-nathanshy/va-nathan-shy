@@ -11,7 +11,7 @@ void runPractice() {
   main_utils.printDivider();
 
   print("3. Write a program to print current time after 2 seconds using Future.delayed().");
-  practice_eight_utils.getCurrentTime().then((value)=> print(value));
+  practice_eight_utils.getCurrentTime().then((value)=> print("Exercise 03: $value"));
   main_utils.printDivider();
 
   print("4. Write a program in dart that reads csv file and print it’s content.");
@@ -42,4 +42,5 @@ void runPractice() {
   print("10. Write a Dart program that takes a string as input, reverses the string asynchronously, and then prints the reversed string.");
   practice_eight_utils.asyncStringReverse();
   main_utils.printDivider();
+
 }
