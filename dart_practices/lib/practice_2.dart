@@ -50,9 +50,9 @@ void printMultiplicationTables(int maxTableMultiplier, [int? minTableMultiplier]
   int rows = int.parse(stdin.readLineSync()!);
 
   for(int i = minTableMultiplier ?? 1; i <= maxTableMultiplier; i++){
-    print("MULTIPLICATION TABLE FOR ${i}");
+    print("MULTIPLICATION TABLE FOR $i");
     for(int j = 1; j <= rows; j++){
-      print("${j} * ${i} = ${j*i}");
+      print("$j * $i = ${j*i}");
     }
     print("\n");
   }

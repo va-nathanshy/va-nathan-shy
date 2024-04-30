@@ -36,6 +36,9 @@ num calculatePower(num baseNumber, num exponent) => pow(baseNumber, exponent);
 num addTwoNumbers(num addend1, num addend2) => addend1 + addend2;
 
 num maxNumber(num num1, num num2, num num3) {
+  // List<int> test = [5,6,8];
+  // test.reduce(max);
+
   if(num1 > num2 && num1 > num3) {
     return num1;
   } 
@@ -44,7 +47,7 @@ num maxNumber(num num1, num num2, num num3) {
     return num2;
   }
 
-  return num2;
+  return num3;
 
 }
 

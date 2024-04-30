@@ -32,7 +32,7 @@ int getIntUserInput({int min = -2147483648, int max = 2147483647}) {
       continueOperation = false;
     } else {
       print("Please enter a valid number [$min - $max]: ");
-      stdout.write("Selection: ");
+      stdout.write("New Input: ");
     }
   } while (continueOperation);
   return int.parse(userInput);

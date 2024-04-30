@@ -42,5 +42,4 @@ void runPractice() {
   print("10. Write a Dart program that takes a string as input, reverses the string asynchronously, and then prints the reversed string.");
   practice_eight_utils.asyncStringReverse();
   main_utils.printDivider();
-
 }

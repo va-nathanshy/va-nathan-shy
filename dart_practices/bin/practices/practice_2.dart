@@ -4,7 +4,7 @@ import 'package:dart_practices/practice_2.dart' as practice_two_utils;
 void runPractice() {
   print("1. Write a dart program to check if the number is odd or even.");
   print(
-      practice_two_utils.isNumberEven(5) ? "Number is Enen" : "Number is Odd");
+      practice_two_utils.isNumberEven(5) ? "Number is Even" : "Number is Odd");
   main_utils.printDivider();
 
   print(

@@ -39,7 +39,7 @@ int nullableInt(int? param) {
 }
 
 int generateRandom() {
-  late int? status;
+  int? status;
 
   status = Random().nextBool() ? 100 : null;
 

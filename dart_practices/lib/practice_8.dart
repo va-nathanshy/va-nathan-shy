@@ -86,15 +86,14 @@ void asyncSortedListPrint() {
   print("Async Test");
 }
 
+void getDataAsyncSortedListPrint(List userInputs) async {
+  print("Exercise 08: ${await asyncSortList(userInputs)}");
+}
+
 Future<List> asyncSortList(List userInputs) {
   userInputs.sort();
   print("sorting...");
   return Future.delayed(Duration(seconds: 2),() => userInputs);
-}
-
-
-void getDataAsyncSortedListPrint(List userInputs) async {
-  print("Exercise 08: ${await asyncSortList(userInputs)}");
 }
 
 /// Exercise 09
@@ -146,4 +145,3 @@ void getDataAsyncStringReverse(String userInput) async{
 Future<String> reverseString(String userInput) {
   return Future.delayed(Duration(seconds : 2), () => userInput.split('').reversed.join());
 }
-

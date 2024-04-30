@@ -43,10 +43,10 @@ void runPractice() {
   main_utils.printDivider();
 
   print("11. Write a function in Dart called createUser with parameters name, age, and isActive, where isActive has a default value of true.");
-  print(practice_three_utils.createUser("Nathan Shy", 27));
+  print(practice_three_utils.createUser("Jaysel Duran", 27, false));
   main_utils.printDivider();
 
   print("12. Write a function in Dart called calculateArea that calculates the area of a rectangle. It should take length and width as arguments, with a default value of 1 for both. Formula: length * width.");
-  print(practice_three_utils.calculateArea(4));
+  print(practice_three_utils.calculateArea());
   main_utils.printDivider();
 }
