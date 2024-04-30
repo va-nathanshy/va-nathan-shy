@@ -8,12 +8,18 @@ Future<DateTime> getCurrentTime() async{
 }
 
 /// Exercise 04
-Stream<String> inputStream() async*{
+Stream<String> fileStream() async*{
   List<String> lines = File('lib/files/04.csv').readAsStringSync().split("\n");
   print("--------------------");
   for(var line in lines){
-    //await Future.delayed(Duration(seconds: 1));
-    print("Exercise 04: $line");
+    await Future.delayed(Duration(seconds: 1));
+    yield "Exercise 04: $line";
+  }
+}
+
+void printStream() async {
+  await for (String fileContent in fileStream()) {
+    print(fileContent);
   }
 }
 

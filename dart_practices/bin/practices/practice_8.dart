@@ -15,7 +15,7 @@ void runPractice() {
   main_utils.printDivider();
 
   print("4. Write a program in dart that reads csv file and print it’s content.");
-  practice_eight_utils.inputStream().forEach(print);
+  practice_eight_utils.printStream();
   print("Async read");
   main_utils.printDivider();
 
